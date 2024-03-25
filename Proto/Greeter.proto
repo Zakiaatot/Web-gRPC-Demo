@@ -1,0 +1,19 @@
+syntax = "proto3";
+package Greeter;
+
+
+// Defines the service
+service Greeter {
+    // Function invoked to send the request
+    rpc GetGreeting (GreetRequest) returns (GreetReply) {}
+}
+
+// The request message containing requested numbers
+message GreetRequest {
+    string name = 1;
+}
+
+// The response message containing response
+message GreetReply {
+    string res = 1;
+}
